@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'battle', pathMatch: 'full' },
   { path: 'battle', component: BattleComponent },
   { path: 'feedback', component: FeedbackComponent }
-];;
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
@@ -21,6 +21,6 @@ const routes: Routes = [
 
 export class AppRoutingModule {
   
-  constructor(protected _googleAnalyticsService: NgGoogleAnalyticsTracker) { }
+  constructor(public googleAnalyticsService: NgGoogleAnalyticsTracker) { }
   
 }
