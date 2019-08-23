@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { GoogleAnalyticsService } from 'src/app/services/google-analytics.service';
 import { NgGoogleAnalyticsTracker } from 'ng-google-analytics';
 
 @Component({

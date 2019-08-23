@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { GoogleAnalyticsService } from "./services/google-analytics.service";
 import { NgGoogleAnalyticsTracker } from 'ng-google-analytics';
 
 import { BattleComponent } from './pages/battle/battle.component';
