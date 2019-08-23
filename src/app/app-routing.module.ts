@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GoogleAnalyticsService } from "./services/google-analytics.service";
+import { NgGoogleAnalyticsTracker } from 'ng-google-analytics';
 
 import { BattleComponent } from './pages/battle/battle.component';
 import { FeedbackComponent } from './pages/feedback/feedback.component';
@@ -15,10 +16,12 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
   providers: [
-    GoogleAnalyticsService
+    NgGoogleAnalyticsTracker
   ]
 })
+
 export class AppRoutingModule {
   
-  constructor(protected _googleAnalyticsService: GoogleAnalyticsService) { }
+  constructor(protected _googleAnalyticsService: NgGoogleAnalyticsTracker) { }
+  
 }

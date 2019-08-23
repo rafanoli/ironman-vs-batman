@@ -119,6 +119,41 @@
           }
         }
       }
+    },
+    "NgGoogleAnalytics": {
+      "projectType": "library",
+      "root": "projects/ng-google-analytics",
+      "sourceRoot": "projects/ng-google-analytics/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-google-analytics/tsconfig.lib.json",
+            "project": "projects/ng-google-analytics/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-google-analytics/src/test.ts",
+            "tsConfig": "projects/ng-google-analytics/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-google-analytics/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-google-analytics/tsconfig.lib.json",
+              "projects/ng-google-analytics/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "ironman-vs-batman-analytics"
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GoogleAnalyticsService } from 'src/app/services/google-analytics.service';
+import { NgGoogleAnalyticsTracker } from 'ng-google-analytics';
 
 @Component({
   selector: 'app-battle',
@@ -15,7 +16,7 @@ export class BattleComponent implements OnInit {
   animatePage: any = 'animated zoomIn';
   selected: boolean = false;
 
-  constructor(private router: Router, public googleAnalyticsService: GoogleAnalyticsService) { }
+  constructor(private router: Router, public googleAnalyticsService: NgGoogleAnalyticsTracker) { }
 
   ngOnInit() {
   }
