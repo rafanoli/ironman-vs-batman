@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgGoogleAnalyticsTracker } from 'ng-google-analytics';
 
+
 @Component({
   selector: 'app-battle',
   templateUrl: './battle.component.html',
   styleUrls: ['./battle.component.scss']
 })
+
 export class BattleComponent implements OnInit {
 
   imgCard: any = 'ironman-vs-batman';
@@ -43,7 +45,9 @@ export class BattleComponent implements OnInit {
   }
 
   votar() {
-    this.googleAnalyticsService.eventEmitter("Personagem Selecionado", this.personagemSelecionado);
+
+    this.googleAnalyticsService.eventTracker("Personagem Selecionado", this.personagemSelecionado);
+
     this.animatePage = 'animated zoomOut';
     setTimeout(() => {
       this.router.navigate(['feedback'], { state: { personagem: this.personagemSelecionado } });
